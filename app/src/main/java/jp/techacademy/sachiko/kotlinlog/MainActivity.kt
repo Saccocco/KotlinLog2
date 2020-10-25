@@ -10,18 +10,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val num1 = 100
-        val num2 = 0
-        var ans = 0
-        ans = num1 / num2
+     val dog = Dog("ぽち", 3) //名前をポチ、年齢3歳で、Dogのインスタンスを作る
 
-        try {
-            ans = num1 / num2
+        dog.say() //ポチが吠えます（ログ出力）
+        Log.d("kotlintest","犬の名前は" + dog.name + "です。")
+        Log.d("kotlintest","犬の年齢は" + dog.age + "歳です。")
 
-        } catch (e:Exception) {
+        val dog2 = Dog("ハチ",10) // 名前をハチ、年齢10歳で、Dogインスタンスを作る
+        dog2.say() //ハチが吠えます（ログ出力）
 
+        Log.d("kotlintest", "犬の名前は" + dog2.name + "です。")
+        Log.d("kotlintest", "犬の年齢は"　+ dog2.age + "歳です。")
 
-        } finally     {
-        }
     }
 }
+
