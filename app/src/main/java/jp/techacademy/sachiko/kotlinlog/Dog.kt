@@ -3,20 +3,20 @@ package jp.techacademy.sachiko.kotlinlog
 import android.util.Log
 
 
-class Dog {
-    //プロパティ
-    var name: String
-    var age: Int
+open class Dog: Animal, Movable {
 
     //引数つきコントラクタ
-    constructor(name: String, age: Int){
-        this.name = name
-        this.age = age
+    constructor(name: String, age: Int): super(name, age){
+
 
     }
 
-    //メソッド
-    fun say() {
+    //Animalクラスのメソッドをオーバーライド
+    override fun say() {
         Log.d("kotlintest", this.name + "(" + this.age + "歳)" + "「ワンワン」")
+    }
+    //Movableインターフェースのメソッドをオーバーライド
+    override fun move() {
+        Log.d("kotlintest", this.name + "(" + this.age + "歳)" + "は全力で走った。")
     }
 }
