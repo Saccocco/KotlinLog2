@@ -2,7 +2,7 @@ package jp.techacademy.sachiko.kotlinlog
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+
 
 
 class MainActivity : AppCompatActivity() {
@@ -13,9 +13,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val human = Human( "さちこ", 30, "プログラミング")
-        human.say()
-        human.think()
+        val taro = Human( "たろう", 25, "水泳")
+        taro.say()
+        taro.think()
+        val sachiko = Human( "さちこ", 30, "プログラミング")
+        sachiko.say()
+        sachiko.think()
+
     }
 
 }
